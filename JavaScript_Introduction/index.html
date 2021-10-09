@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Initial Page</title>
+
+    <style>
+      body {
+        padding: 0;
+        margin: 0 auto;
+      }
+
+      #global {
+        margin: auto;
+        width: 40%;
+        padding: 10px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+
+      #example {
+        border-left: 6px solid yellow;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="global">
+      <div id="history">
+        <h1>JavaScript</h1>
+        <h2>O que é</h2>
+        <img id="logo" src="javascript.jpg" alt="Logo JavaScript" />
+        <p>
+          Javascript é uma das linguagens de programação mais populares do mundo
+          e possuí uma diversidade gigantesca de aplicação, porém fortemente
+          utilizado no Front-End a parte visual do site. Sua popularidade vem do
+          fato dela ser uma linguagem extremamente flexível e multifacetada,
+          fzendo com que milhares de pessoas desenvolvedoras se interessassem
+          por ela, inclusive para escrever os primeiros códigos.
+        </p>
+
+        <h2>Tipos de dados</h2>
+        <ul>
+          <li><strong>Number</strong>: Dado de tipo numérico "1, 2, 10";</li>
+          <li>
+            <strong>String</strong>: Dado de tipo alfanumérico "peixe, bola,
+            gato";
+          </li>
+          <li>
+            <strong>Boolean</strong>: Dado de tipo verdadeiro ou falso "true or
+            false";
+          </li>
+          <li>
+            <strong>Array</strong>: Também conhecido como vetor, nele podem ser
+            guardados vários dados e depois recupera-los para uso posterior
+            "["peixe", "bola", "gato"]";
+          </li>
+          <li>
+            <strong>Object</strong>: Nele serão guardados dados como pessoas,
+            animais com suas determinadas caracteristicas "<br />{nome: "João",
+            <br />
+            idade: 28, <br />
+            peso: 48}
+          </li>
+        </ul>
+
+        <h2>Fracamente tipado.</h2>
+
+        <p>
+          JavaScript é uma linguagem fracamente tipada, ou seja, quando vamos
+          declarar uma variável não precisamos especificar o tipo de dado que a
+          mesma irá receber, a própria linguagem atribuirá o tipo de dado quando
+          dermos um valor a variável, por exemplo:
+        </p>
+        <div id="example">
+          <p>
+            <strong
+              >let i; <br />
+              i = 1
+            </strong>
+          </p>
+        </div>
+        <p>
+          Neste caso a minha variável "i" será do tipo number (número), e é
+          dessa forma que serão declaradas as variáveis.
+        </p>
+
+        <h2>JavaScript Funções próprias</h2>
+        <p>
+          O JavaScript já possuí várias funções próprias, por exemplo quando
+          declaramos uma string (alfanumérico) a mesma já possuí uma série de
+          informações que podem ser utilizadas, tais como, quantidade de letras,
+          posições em array, etc...
+        </p>
+      </div>
+
+      <div id="sintax">
+        <h2>Declarando variável e constante</h2>
+        <p>
+          Para declaração utilizamos 3 principais comandos:
+          <strong>Var, Let e Const</strong>
+        </p>
+        <ul>
+          <li>
+            <strong>var</strong>: Declara uma variável porém tem um uso um tanto
+            quanto restrito por não ter escopo, então é complicada de controlar,
+            ainda mais quando se é iniciante, por exemplo:
+          </li>
+        </ul>
+        <div id="example">
+          <p>
+            <strong
+              >console.log("existe x antes do bloco?" + x); <br /><br />
+              var x = 0; <br /><br />
+              console.log("existe x depois do bloco?" + x);
+            </strong>
+          </p>
+        </div>
+
+        <p>
+          O que se espera é que ocorra um erro pois var não foi declarado antes
+          do primeiro comando para impressão na tela, porém o resultado é
+        </p>
+
+        <img
+          id="image"
+          src="var_exemplo.jpg"
+          alt="exemplo tirado da Rocketseat Discovery"
+        />
+
+        <p>
+          O que acontece é que nosso var sobe no código por debaixo dos panos
+          como se fosse: <br />
+        </p>
+        <div id="example">
+          <p>
+            <strong
+              >var x; <br />
+              console.log("existe x antes do bloco?" + x); <br />
+              x=0; <br />
+              console.log("existe x depois do bloco?" + x);</strong
+            >
+          </p>
+        </div>
+        <h3>Let e Const</h3>
+        <p>
+          Quando vamos declarar uma variável, utilizamos
+          <strong>let</strong> como vimos no exemplo anterior
+          <strong>var</strong> não possuí escopo, já
+          <strong>let</strong> possuí, portanto se usassemos o mesmo exemplo de
+          <strong>var</strong> usando <strong>let</strong>, teriamos um erro já
+          que <strong>let</strong> segue o escopo e até o momento do primeiro
+          <strong> console.log()</strong> não teria sido declarado.
+          <strong>const</strong> é utilizado para declarar uma variável.
+        </p>
+        <h2>Imprimindo mensagens na tela</h2>
+        <p>
+          Para imprimir usamos o comando <strong>console.log()</strong> um
+          exemplo é a classica primeira mensagem que todo programador tenta
+          utilizar na primeira vez em uma linguagem, o "Hello World" que no
+          JavaScript fica console.log("Hello World").
+        </p>
+        <h2>Laços de repetição</h2>
+        <p>
+          Nos laços de repetição a sintaxe mais comum que você verá será
+          <strong>for</strong>, por exemplo: <br />
+        </p>
+        <div id="example">
+          <strong
+            >for(i=0;i<=x;i++) { <br /><br /><br />
+            }</strong
+          >
+        </div>
+        <p>
+          Onde "i" é o seu contador e "x" será um número, por exemplo se eu
+          quiser que o laço se repita 10 vezes, se escreve "i<=10" onde enquanto
+          o contador "i" for menor que 10 o laço irá continuar e apartir do
+          momento que o contador atingir 10 ou seja sair de verdadeiro para
+          falso, o laço irá encerrar.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
